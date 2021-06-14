@@ -1,13 +1,6 @@
 pipeline {
     agent any
-
-    stages {
-        stage('Git Checkout') {
-            steps {
-                echo 'Gitcheckout'
-                git 'https://github.com/Sautech/maven-java-sample.git'
-            }
-        }
+    
         stage('Build') {
             steps {
                 sh 'mvn compile'
